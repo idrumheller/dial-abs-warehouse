@@ -40,12 +40,26 @@
       height: auto;
       margin-bottom: 16px;
     }
-    .mdc-button {
-      margin: 0 8px 16px 8px;
-      transition: transform 0.2s ease;
+    /* Updated call button styles */
+    #call-button {
+      background-color: #2196F3; /* cool blue */
+      color: #FFFFFF;
+      width: 240px;
+      height: 56px;
+      font-size: 1.125rem;
+      display: block;
+      margin: 16px auto;
+      border-radius: 4px;
+      text-align: center;
+      justify-content: center;
     }
-    .mdc-button:hover {
+    /* Hover scale effect */
+    #call-button:hover {
       transform: scale(1.05);
+    }
+    /* Enable ripple on the anchor */
+    .mdc-button__ripple {
+      /* default ripple styling */
     }
   </style>
 </head>
@@ -61,7 +75,7 @@
           </div>
           <div class="mdc-card__actions" style="text-align:center;">
             <a href="tel:+18602969930"
-               class="mdc-button mdc-button--outlined"
+               class="mdc-button mdc-button--unelevated"
                id="call-button">
               <span class="mdc-button__label">Call 860-296-9930</span>
             </a>
