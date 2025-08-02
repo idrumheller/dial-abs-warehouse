@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dial AB&S Warehouse</title>
+
+  <!-- Roboto & Material Icons -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Material Components Web -->
+  <link rel="stylesheet"
+    href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+  <script defer
+    src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+  <!-- PWA manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0; background-color: #f5f5f5;
+    }
+    main {
+      padding: 16px;
+    }
+    .demo-card {
+      max-width: 360px;
+      margin: 24px auto;
+      border-radius: 8px;
+    }
+    .card-content {
+      padding: 24px;
+      text-align: center;
+    }
+    .logo {
+      width: 100px;
+      height: auto;
+      margin-bottom: 16px;
+    }
+    .mdc-button {
+      margin: 0 8px 16px 8px;
+      transition: transform 0.2s ease;
+    }
+    .mdc-button:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <main class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <div class="mdc-card mdc-elevation--z4 demo-card">
+          <div class="card-content">
+            <img src="AB&S Logo.png" alt="AB&S Warehouse" class="logo">
+            <h2 class="mdc-typography--headline6">Dial AB&S Warehouse</h2>
+          </div>
+          <div class="mdc-card__actions" style="text-align:center;">
+            <a href="tel:+18602969930"
+               class="mdc-button mdc-button--outlined"
+               id="call-button">
+              <span class="mdc-button__label">Call 860-296-9930</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Initialize ripples
+    mdc.ripple.MDCRipple.attachTo(document.getElementById('call-button'));
+
+    // Register service worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>

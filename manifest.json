@@ -1,0 +1,21 @@
+{
+    "name": "Dial AB&S Warehouse",
+    "short_name": "Dial AB&S",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#FFFFFF",
+    "theme_color": "#1565C0",
+    "icons": [
+      {
+        "src": "icons/logo-192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "icons/logo-512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
